@@ -49,6 +49,10 @@ public class ChessMatch {
         if (!board.thereIsAPiece(position)) {
             throw new ChessException("The position is not in the board");
         }
+
+        if (!board.piece(position).isThereAnyPossibleMove()) {
+            throw new ChessException("The position is already in the board");
+        }
     }
 
     private void placeNewPiece(char column, int row, ChessPiece piece) {
