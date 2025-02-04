@@ -60,7 +60,7 @@ public class ChessMatch {
         }
 
         if (!board.piece(position).isThereAnyPossibleMove()) {
-            throw new ChessException("The position is already in the board");
+            throw new ChessException("There is no possible move for the chosen piece");
         }
     }
 
